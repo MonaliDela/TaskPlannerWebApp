@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    
+    <!-- code starts from here -->
+     
+    <div class="container-sm py-3 my-3 ">
+        <div class="row justify-content-center">
+            <div class="col-sm-4 py-3 my-3 border shadow " >
+                <form id="validateAddNewTaskForm" novalidation>
+                    <div>
+                        <button type="button" class="close" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                    </div>
+                    <h2 class="text-center mb-3 pt-3">Add New Task</h2>
+                    <div class="form-group">   <!-- Enter Task name -->
+                        <input id="addNewTaskName" type="text" placeholder="Task Name" class="form-control"/>
+                            <div class="valid-feedback">Looks good!</div>
+                            <div class="invalid-feedback">Required and needs to be at least 8 characters long</div>
+                    </div>
+                    
+                    <div class="form-group"> <!--Enter Dscription  -->
+                        <textarea id="addTaskDescription" placeholder="Description" class="form-control" ></textarea>
+                            <div class="valid-feedback">Looks good!</div>
+                            <div class="invalid-feedback">Required and needs to be at least 8 characters long</div>
+                    </div>
+                    
+                    <div class="form-group"> <!--Assign To  -->
+                        <input id="addtaskAssignTo" type="text" placeholder="Assign To" class="form-control" >
+                            <div class="valid-feedback">Looks good!</div>
+                            <div class="invalid-feedback">Required and needs to be at least 8 characters long</div>
+                    </div>
+
+                    <div class="form-group"> <!--due date selection  -->
+                        <div class="row justify-content-left">
+                            <div class="col-sm py-2 ">
+                                <label for="Due">Set Due Date : </label>
+                            </div>
+                            <div class="col-sm pt-1   "> <!-- Status of the task -->
+                                <input id="addTaskDueDate" type="date" class="form-control" >
+                                    <div class="valid-feedback">Looks good!</div>
+                                    <div class="invalid-feedback">Required and should be today or a future date</div>
+                            </div>
+                        </div>     
+                    </div>
+        
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-5 py-2 pl-3 ">
+                                <label for="Status">Status : </label>
+                            </div>
+                            <div class="col-sm-7    "> <!-- Status of the task -->
+                                <select id="addStatus" class="form-control " required>
+                                    <option class="select" >To Do</option>
+                                    <option>In Progress</option>
+                                    <option>In Review</option>
+                                    <option>Done</option>
+                                </select>
+                            </div>
+                        </div>     
+                    </div>
+                
+                    <div class="form-group">  <!-- submit button -->
+                        <div class="row">
+                            <div class="col-sm align-content-center">
+                                <button id="newTaskfromSubmit" type="submit" class="btn btn-primary form-control mb-3">CREATE</button>
+                            </div>
+
+                            <!-- <div class="col-sm align-content-center">
+                                <button type="submit" class="btn btn-primary form-control">CLEAR</button>
+                            </div> -->
+                        </div>
+                    </div>
+
+
+        
+                </form>
+
+            </div>
+
+        </div>
+        
+        
+
+    </div>
+
+
+
+    <script src="index.js"></script> <!-- add js file -->
+
+
+</body>
+</html>
